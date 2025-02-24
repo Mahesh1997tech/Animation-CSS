@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    animation-name: color;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-delay: 5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@keyframes color{
+    0%{
+        background-color: aqua;
+    }
+    25%{
+        background-color: blue;
+    }
+    50%{
+        background-color: blueviolet;
+    }
+    75%{
+        background-color: brown;
+    }
+    100%{
+        background-color: black;
+    }
+}
+
+#box1{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    animation-name:size;
+    animation-duration: 2s;
+    animation-timing-function: 5s;
+    animation-direction: normal;
+}
+@keyframes size{
+    from{
+        height: 200px;
+    }
+    to{
+        height: 400px;
+    }
+}
+
+#box2{
+    position:absolute;
+    top:50px ;
+    left: 350px;
+    height: 80px;
+    width: 100px;
+    /* box-shadow: rgb(10px, 10px,5px) */
+    border: 1px solid black;
+    animation-name: box;
+    animation-duration: 10s;
+    animation-timing-function: 2s;
+    animation-direction: alternate;
+}
+@keyframes box{
+    from{
+        width: 100px;
+
+    }
+    to{
+        width: 200px;
+    }
+}
+
+#box3{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-color: red;
+    top: 50px;
+    /* left: 400px; */
+    border: 2px black solid;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-timing-function: 2s;
+}
+@keyframes move{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 300px;
+    }
+}
+
+#box4{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    border: 2px black solid;
+    border-radius: 100px;
+    animation-name:circle;
+    animation-duration: 5s;
+    animation-direction: inherit;
+    animation-timing-function: 10s;
+    background-color: blueviolet;
+}
+@keyframes circle{
+    0%{
+        height: 100px;
+        width: 100px;
+
+    }
+    50%{
+        height: 200px;
+        width: 200px;
+        background-color: hotpink;
+    }
+    100%{
+        height: 300px;
+        width:300px ;
+        background-color: chartreuse;
+    }
+}
+
+#box5{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce{
+    0%,100%{
+        transform: translatex(0);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+}
+
+#box6{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation: rotate 2s linear infinite;
+    /* border-radius: 50px; */
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#box7{
+    width: 100px;
+
+    position: absolute;
+    left: 350px;
+    top: 100px;
+    height: 100px;
+    background-color: darkgray;
+    animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{
+    0%,100%{
+        scale:(3);
+    }
+    50%{
+        scale: (10);
+    }
+}
+#name{
+    font-size: 40px;
+    font-weight: bold;
+    border-right: 2px solid black;
+    width: O;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40) forwards, blink 1s infinite;
+}
+#keyframes typing{
+ from{
+        width: 0;
+ }
+    to{
+        width: 150px;
+    }
+}
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
